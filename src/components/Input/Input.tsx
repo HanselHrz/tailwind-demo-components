@@ -18,7 +18,7 @@ export const Input: FC<Props> = ({
   width = "w-full",
   rounded = "rounded-md",
   border = "border-0",
-  paddingY = "py-1.5",
+  paddingY = "py-2",
   paddingX = "px-3",
   textColor = "text-gray-900",
   shadow = "shadow-sm",
@@ -31,7 +31,7 @@ export const Input: FC<Props> = ({
 }) => {
   return (
     <input
-      className={`block ${width} ${rounded} ${border} ${paddingY} ${paddingX} ${textColor} ${shadow} ring-1 ring-inset ${ringColor} ${placeholderColor} focus:ring-2 focus:ring-inset ${focusRingColor} ${textSize} ${leading}`}
+      className={`block mb-2 ${width} ${rounded} ${border} ${paddingY} ${paddingX} ${textColor} ${shadow} ring-1 ring-inset ${ringColor} ${placeholderColor} focus:ring-2 focus:ring-inset ${focusRingColor} ${textSize} ${leading}`}
       {...props}
     />
   );

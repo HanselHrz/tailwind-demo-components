@@ -32,7 +32,7 @@ export const Select: FC<Props> = ({
 }) => {
   return (
     <select
-      className={`${width} ${height} ${rounded} ${borderColor} ${textColor} ${placeholderColor} ${focusRingColor} ${paddingY} ${paddingX} ${textSize} ${shadow} border focus:ring-2`}
+      className={`mb-2 ${width} ${height} ${rounded} ${borderColor} ${textColor} ${placeholderColor} ${focusRingColor} ${paddingY} ${paddingX} ${textSize} ${shadow} border focus:ring-2`}
       {...props}
     >
       {options.map((option, index) => (
