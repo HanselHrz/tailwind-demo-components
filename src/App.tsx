@@ -8,11 +8,27 @@ import { RadioButton } from './components/ui/RadioButton';
 import { Select } from "./components/ui/Select"
 // import { Switch } from "./components/ui/Switch"
 import { FileUpload } from "./components/ui/InputFile"
+import { Navbar } from "./components/ui/Navbar"
 
 
 function App() {
+  const navItems = [
+    { href: '#', children: 'Link1', current: false },
+    { href: '#', children: 'Link2', current: false },
+    { href: '#', children: 'Link3', current: true },
+  ];
 
   return (
+    <>
+      <Navbar
+        logoText="Pruebas de componentes"
+        tagline="Division por titulo"
+        items={navItems}
+        navbarClassName="bg-white"
+        logoClassName="text-black-500"
+        taglineClassName="text-gray-400"
+        itemClassName="hover:text-yellow-300"
+      />
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div  className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <Title>Prueba de componentes</Title>
@@ -36,6 +52,7 @@ function App() {
         <FileUpload />
       </div>
     </div>
+  </>
   )
 }
 
