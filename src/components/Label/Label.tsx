@@ -1,29 +1,27 @@
-import { LabelHTMLAttributes, FC } from 'react';
+import React from 'react';
 
-interface Props extends LabelHTMLAttributes<HTMLLabelElement> {
-  textSize?: string;
-  fontWeight?: string;
-  textColor?: string;
-  leading?: string;
-  margin?: string;
-  padding?: string;
-  display?: string;
+interface LabelProps {
+  htmlFor?: string;
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown; // Para permitir props adicionales si es necesario
 }
 
-export const Label: FC<Props> = ({
-  textSize = "text-sm",
-  fontWeight = "font-medium",
-  textColor = "text-gray-900",
-  leading = "leading-6",
-  margin = "",
-  padding = "",
-  display = "block",
+export function Label({
+  htmlFor,
+  className = '',
+  children,
   ...props
-}) => {
+}: LabelProps) {
   return (
     <label
-      className={`${display} ${textSize} ${fontWeight} ${textColor} ${leading} ${margin} ${padding}`}
+      htmlFor={htmlFor}
+      className={`block text-sm font-medium text-gray-900 leading-6 ${className}`}
       {...props}
-    />
+    >
+      {children}
+    </label>
   );
-};
+}
+
+export default Label;

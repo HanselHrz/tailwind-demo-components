@@ -92,6 +92,13 @@ export default {
           background: '#F7FAFC',   // Fondo del section
           border: '#E2E8F0',       // Borde del section
         },
+        input: {
+          background: '#F7FAFC',  // Fondo para el input
+          border: '#CBD5E0',      // Borde del input
+          focus: '#6C63FF',       // Color del borde al enfocar
+          error: '#FF0000',       // Borde rojo para error
+          success: '#00FF00',     // Borde verde para éxito
+        },
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
